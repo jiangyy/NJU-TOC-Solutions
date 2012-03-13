@@ -1,0 +1,20 @@
+\problem{Prove that the Fibonacci sequence $f(0)=f(1)=1,f(x+2)=f(x)+f(x+1) \in \EF$ and $\PRF$.}
+\begin{pf} \rm
+  Let $\{\pg, K, L\}$ be any paring function in $\PRF$. Let
+\[
+\begin{array}{c}
+F(0) = \pg( 1, 0 ) \\
+F(x + 1) = \pg(K(F(x)) + L(f(x)),  K(F(x))),
+\end{array}
+\]
+we have $F$ is in $\PRF$ and $K(F(x)) = f(x)$, therefore $f\in\PRF$. 
+
+On the other hand, 
+$f(x)$ is the number of binary strings of length $x-1$ without successive 1s. Therefore
+
+$\displaystyle f(x) = \sum_{i=0}^{2^{n-1}} \sum_{j = 0}^{n - 2}
+N\Big(\eq ( \rs(i, 2^j) , \rs(i, 2^{j + 1}))\Big) \times
+\eq \Big( \rs(i, 2^j) , 0 \Big) \in \EF$.
+\qed
+\end{pf}
+

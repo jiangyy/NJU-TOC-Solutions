@@ -1,0 +1,13 @@
+\problem{Let $\mathrm{pg}(x, y)=2^x(2y+1)-1$. Prove that there exists 
+elementary function $K(x)$ and $L(x)$ such that $K(\mathrm{pg}(x, y)) = x,
+L(\mathrm{pg}(x, y)) = y$ and $\mathrm{pg}(K(z),L(z))=z$.}
+
+\begin{pf} \rm
+ Let $\displaystyle K(x) = \mathrm{ep}_0 (x + 1), L(x) = 
+\frac{1}{2} \left( \frac{x + 1}{2^{K(x)}} - 1 \right) $, we have
+ 
+$\displaystyle \mathrm{pg}(K(z),L(z)) = 
+2^{\mathrm{ep}_0(z+1)} \left( \frac{z + 1}{2^{\mathrm{ep}_0(z+1)}} \right) - 1
+=z
+$. \qed
+\end{pf}

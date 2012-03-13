@@ -1,0 +1,16 @@
+\problem{Let $f:\mathbb{N}\to\mathbb{N}$, $f(0) = 1, f(1) = 4, f(2) = 6,
+  f(x+3)=f(x)+f^2(x+1)+f^3(x+2)$. Prove that $f\in\PRF$.}
+
+\begin{pf} \rm
+  Let $G(0) = \langle 1, 4, 6\rangle$ and
+\[
+ G(x + 1) = \langle
+   \ep_1(G(x)),
+   \ep_2(G(x)),
+   \ep_0( G(x) ) + \ep_1^2(G(x)) + \ep_2^3(G(x))
+ \rangle,
+\]
+
+\noindent we have $\mathrm{ep}_0(G(x)) = f(x)$. \qed
+\end{pf}
+

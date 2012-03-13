@@ -1,0 +1,21 @@
+\problem{Define $g:\mathbb{N}\to\mathbb{N}$ by 
+$g(0) = 0, g(1) = 1, g(n + 2) = \rs((2002g(n + 1) + 2003g(n)), 2005)$. Find $g(2006)$.}
+
+\begin{pf} \rm
+We have $\displaystyle g(n) = \rs \left( \frac{(-1)^{n+1} + 2003^n}{2004} , 2005 \right)$
+and $2005=5\cdot 401$, therefore
+ 
+\[
+ \begin{array}{rcl}
+   g(2006) \mod 2005 & = & \Big((2003^{2006} - 1) \times 2004^{-1} \Big) \mod 2005 \\
+                     & = & \Big((2^{2006} - 1) \times 2004\Big) \mod 2005. \\
+ \end{array}
+\]
+
+Since $a^{p-1} \equiv 1\mod p$ for all prime $p$,
+$2^{2006} \equiv 2^2 \equiv 4\mod 5, 2^{2006} \equiv 2^6 \equiv 64 \mod 401$.
+According to the Chinese remainder theorem,
+$2^{2006} \equiv 64\mod 2005$. Therefore, $g(2006) \equiv 63\times2004
+\equiv 1942\mod 2005$. \qed
+
+\end{pf}

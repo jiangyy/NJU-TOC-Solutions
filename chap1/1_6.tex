@@ -1,0 +1,15 @@
+\problem{Let $f:\mathbb{N}\to\mathbb{N}$. Prove that $f$ could be left function in
+a pairing function if and only if $|\{x\in\mathbb{N} : f(x) = i\}|=\aleph_0$
+for all $i\in\mathbb{N}$.}
+
+\begin{pf} \rm
+ The necessity is trivial by a simple contradiction.
+ For the sufficiency, $|\{x\in\mathbb{N} : f(x) = i\}|=\aleph_0$ implies that
+ there exists onto mapping
+ $f_i : N_i\to \mathbb{N}$ such that $N_i = \{x~ | ~f(x) = i\}$ for all $i$,
+ which implies that $f_i^{-1}$ exists for all $i$.
+ By letting $\mathrm{pg}(x, y) = f_x^{-1}(y)$,
+ we have $K(z) = f(f_x^{-1}(z)) = x$ and $L(z) 
+ = f_x(z) = f_x( f_x^{-1}(y) ) = y$. \qed
+
+\end{pf}

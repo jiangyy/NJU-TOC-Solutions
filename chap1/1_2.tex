@@ -1,0 +1,21 @@
+\problem{Prove: for any $k\in\mathbb{N}^+, f:\mathbb{N}^k\to\mathbb{N}$,
+there always exists $h$ satisfying $f(\mathbf{x})<\|\mathbf{x}\|+h$ if $f\in\mathcal{BF}$.}
+\begin{pf} \rm
+We perform a structural induction on the constructive length $\ell$ of basic function $f$.
+
+When $\ell=0$, $f\in\mathcal{IF}$. Thus $f(x) \leq S(x) < x + 2$ for all $x$.
+Let $h_0 = 2$.
+
+We assume when $0\leq \ell \leq n$, all functions $f$ with constructive length
+no longer than $\ell$ satisfy $f(\mathbf{x})<\|\mathbf{x}\|+h_n$.
+
+In the case of $\ell = n + 1$, assume that $f$ is constructed by sequence $f_0,f_1,\ldots,f_n,f$.
+If $f\in\mathcal{IF}$, it is trivial that $f(x) \leq S(x) < \|\mathbf{x}\|+2h_{n}$.
+Elsewise, $f = \textrm{Comp}^m_k[f_{i_0},f_{i_1},\ldots,f_{i_k}]$.
+By inductive hypothesis we have $f_{i_j} < h_n$ for all $j$, thus
+$f(\mathbf{x}) < \max\{f_{i_j}(\mathbf{x})\} + h_n < \|\mathbf{x}\| + 2h_n$.
+Therefore, by letting $h=2^{\ell + 1}$,  $f(\mathbf{x})<\|\mathbf{x}\|+h$ always
+holds. \qed
+
+\end{pf}
+

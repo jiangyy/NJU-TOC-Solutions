@@ -1,0 +1,10 @@
+\problem{Prove: binary number theoretic function $x+y\notin\mathcal{BF}$.}
+\begin{pf} \rm
+ We have already proved that for any $k\in\mathbb{N}^+, f:\mathbb{N}^k\to\mathbb{N}$,
+there always exists $h$ satisfying $f(\mathbf{x})<\|\mathbf{x}\|+h$ if $f\in\mathcal{BF}$.
+
+If $x+y\in\mathcal{BF}$, there is $h$ such that
+$x + x = 2x = 2\|\mathbf{x}\| < \|\mathbf{x}\| + h$,
+which implies $x < h$, leading to contradiction. \qed
+
+\end{pf}

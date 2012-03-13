@@ -1,0 +1,14 @@
+\problem{Prove: $\min x\leq n.[f(x,\mathbf{y})] = n - \max x \leq n.[f(n - x,\mathbf{y})]$,
+and $\max x\leq n.[f(x,\mathbf{y})] = n - \min x \leq n.[f(n - x,\mathbf{y})]$.}
+
+\begin{pf} \rm
+ For simplicity, let $m=\min x\leq n.[f(x,\mathbf{y})]$ and $M=\max x\leq n.[f(n - x,\mathbf{y})]$.
+
+If there is no $0\leq x\leq n$ satisfying $f(x,\mathbf{y})=0$, we have $m=n$ and $M=0$, hence
+$m + M = n$. Otherwise, let $a$ be the minimum root of $f(x, \mathbf{y})$, thus 
+$f(x, \mathbf{y})\neq 0$ for all $x<a$, and  $f(n - x, \mathbf{y})\neq 0$ for all $x > n - a$.
+By definition, we can easily see that $m+M=n$. Since both $m$ and $M$ will not exceed $n$, 
+$m+M=n$ yields $m = n - M$ and $M = n - m$. 
+
+The another case is trivial by symmetry. \qed
+\end{pf}

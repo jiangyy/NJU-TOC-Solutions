@@ -1,0 +1,25 @@
+\problem{Prove that $
+\displaystyle\left\lfloor\left(\frac{\sqrt{5}+1}{2}\right)n\right\rfloor \in \EF$.}
+
+\begin{pf} \rm
+Let $\varphi = \frac{\sqrt{5}+1}{2}$, we can rewrite the solution of 
+$y=\lfloor \varphi n\rfloor$ by
+
+\[
+\begin{array}{rcl}
+ y &= & \displaystyle \max_{x\in\mathbb{N}} x \\
+ & \mathrm{s.t.} & \varphi n \leq x,
+\end{array}
+\]
+\noindent
+therefore
+$ \displaystyle y = 
+ \sum_{i = 0}^{2n}
+ i\times N \left\{
+ \eq \left[
+  \sum_{j = i}^{2n} N\Big(\eq(i^2 - in - n^2, 0)\Big)
+ , 1
+ \right] \right\} $.
+\qed
+\end{pf}
+

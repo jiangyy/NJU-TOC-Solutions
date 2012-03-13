@@ -1,0 +1,13 @@
+\problem{Let $f(n) = n^{n^{\ldots^n}}$, prove that $f\in \PRF-\EF$.}
+
+\begin{pf} \rm
+ Let $g(n, 0) = 0$ and 
+ $g(n, x + 1) = n^{ g(n, x)}$. Thus $g\in \PRF$ and $g(n, n) = f(n)$,
+ therefore $f\in\PRF$. On the other hand, $G(k, x) = 2^{2^{\ldots^x}}$ is
+ one among the control functions of $\EF$. If $f\in EF$, there exists
+ $k$ such that $G(k, n) > f(n)$ for all $n$. However, this is impossible
+ because $f(k + 2)$ is always greater than $G(k, k)$. \qed
+\end{pf}
+
+
+

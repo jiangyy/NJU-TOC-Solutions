@@ -1,0 +1,17 @@
+\problem{Prove: binary number theoretic function $x-y\notin\mathcal{BF}$.}
+\begin{pf} \rm
+Since $\mathrm{pred} = \mathrm{Comp}^1_2[P_1^1, S\circ Z]$, proving $\mathrm{pred}\notin
+\mathcal{BF}$ is enough to show $x-y\notin\mathcal{BF}$.
+Assume there exists shortest construction procedure
+$f_0, f_1, \ldots, f_n, \mathrm{pred}$. There are two cases:
+
+Case 1. $f_n\in\{S,Z,P\}$ is not the case.
+
+Case 2. $f_n$ is a composition of $S,Z$ or $P$. $f_n$ cannot be composition of $S$ because
+$S(x)>0$ for all $x$, and $\mathrm{pred}(1)=0$. Also, $f_n$ cannot be composition of 
+$Z$ because $\mathrm{pred}(x)$
+can be arbitrarily large. Finally, $f_n$ cannot be composition of $P$ because this contradicts
+the shortest construction assumption. \qed
+
+\end{pf}
+

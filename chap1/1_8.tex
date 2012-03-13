@@ -1,0 +1,8 @@
+\problem{Let $M(x)$ be $M(M(x+11))$ when $x\leq 100$ and $x-10$ when $x>100$.
+Prove $M(x)=91$ when $x\leq 100$.}
+\begin{pf} \rm
+The basic case is $M(99) = M(M(110)) = M(100) = M(M(111)) = M(101) = 91$, and
+$M(x) = M(M(x)) = M(x + 1)$ when $90 \leq x \leq 100$.
+An induction on $x$ shows $M(x)=91$ for all $0\leq x\leq 100$. \qed
+\end{pf}
+

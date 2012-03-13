@@ -1,0 +1,50 @@
+% \XeTeXinputencoding "cp936"
+
+\setCJKfamilyfont{kai}{KaiTi_GB2312}
+\setCJKfamilyfont{hei}{STXihei}
+\setCJKmainfont{SimSun}
+
+\pagestyle{fancy}
+\rhead{{\sf\thepage}}
+\lhead{\sf ``Introduction to Models of Computation'' Solutions}
+
+\renewcommand{\contentsname}{\hei 目录}
+\renewcommand{\figurename}{\kai 图}
+\renewcommand{\algorithmcfname}{\kai 算法}
+
+\newcommand{\kai}{\CJKfamily{kai}}
+\newcommand{\hei}{\CJKfamily{hei}}
+
+\newcommand\TT{\rule{0pt}{2.6ex}}
+\newcommand\BB{\rule[-1.2ex]{0pt}{0pt}}
+
+\renewcommand\refname{\hei 参考文献}
+
+%\setlength{\parindent}{2.2em}
+
+\lstset {
+        basicstyle = \sf,
+        language = Java,
+        tabsize = 4,
+        columns = flexible
+}
+
+\usepackage{enumitem}
+\setenumerate[1]{itemsep=3pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setitemize[1]{itemsep=3pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setdescription{itemsep=3pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\usepackage{sectsty}
+\allsectionsfont{\hei}
+
+\newcommand{\IF}{\mathcal{IF}}
+\newcommand{\EF}{\mathcal{EF}}
+\newcommand{\PRF}{\mathcal{PRF}}
+\newcommand{\RF}{\mathcal{RF}}
+\newcommand{\pg}{\mathrm{pg}}
+\newcommand{\rs}{\mathrm{rs}}
+\newcommand{\eq}{\mathrm{eq}}
+\newcommand{\ep}{\mathrm{ep}}
+\newcommand{\mod}{\textrm{ mod }}
+
+\newcommand{\problem}{\subsection}
+

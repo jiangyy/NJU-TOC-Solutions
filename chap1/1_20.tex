@@ -1,1 +1,11 @@
-\problem{1.20}
+\problem{Prove that $\mathrm{Ack}(4, n)\in \PRF-\RF$.}
+\begin{pf} \rm
+ Let $f(0) = 1$, $f(n + 1) = 2^{f(n)}$, we immediately have $f\in\PRF$,
+ therefore  $\mathrm{Ack}(4, n) = f(n + 3) - 3 \in\PRF$.
+
+ $G(k, x) = 2^{2^{\ldots^x}}$ is the control function of $\EF$.
+ Assume that $\mathrm{Ack}(4, n) \in\EF$,
+ thus $G'(k, x) = \mathrm{Ack}(4, x + k) + 3\in\EF$.
+ However, $G(k, x) < G'(k, x)$ contradicts the assumption, 
+yielding $\mathrm{Ack}(4, n) \in\PRF-\EF$. \qed
+\end{pf}

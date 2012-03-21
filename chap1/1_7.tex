@@ -5,39 +5,32 @@ composition and $\prod_{i=n}^m [\cdot]$ operator.}
   We first build some function by the conditioning ability of $\Pi$:
 
 \[
+  N(x) = \prod_{i=1}^{x} Z(i)\textrm{, }
+  \mathrm{leq}(x, y) = \prod_{i = x}^y Z(i)\textrm{, and }
+  \mathrm{geq}(x, y) = \prod_{i = y}^x Z(i).
+\]
+
+\noindent Also, we can construct integral power and thus equality by
+\[
  \begin{array}{c}
-  \displaystyle N(x) = \prod_{i=1}^{x} Z(i), N^2(x) = \prod_{i=1}^{N(x)} Z(i) \\
-  \displaystyle \mathrm{leq}(x, y) = \prod_{i = x}^y Z(i), 
-  \displaystyle \mathrm{geq}(x, y) = \prod_{i = y}^x Z(i) \\
-  \displaystyle \mathrm{gt}(x, y) = N(\mathrm{leq}(x, y)), 
-  \displaystyle \mathrm{lt}(x, y) = N(\mathrm{geq}(x, y)). \\
+    \displaystyle \mathrm{pow}(x, k)  = \prod_{i = 1}^{k} x, \\
+    \displaystyle \eq(x, y) = \mathrm{leq}(x, y) ^ {N( \mathrm{geq}(x, y))}, \\
  \end{array}
 \]
 
-  Then, we can conjunct and disjunct between predicates by
-
-\[
-  \mathrm{\land}(x, y) = \prod_{i = 1}^{N(x)} y, 
-  \mathrm{\lor}(x, y) = N( N(x) \land N(y) ),
-\]
-
-\noindent therefore $\mathrm{eq}(x, y) = N(\mathrm{gt}(x, y)) \land N(\mathrm{lt}(x, y))$.
-
-On the other hand,  we construct $\Sigma$ operator in the following way:
+\noindent and finally $\Sigma$ operator by creating logarithm:
 
 \[
  \begin{array}{c}
-    \displaystyle \mathrm{pow}(x, k)  = \prod_{i = 1}^{k} P_2^2(i, x), \\
     \displaystyle \log (x) = \prod_{i = 0}^{x} i^{N(\mathrm{eq}(2^i, x))}, \\
-    \displaystyle \sum_{i=n}^{m} f(i, \mathbf{x}) = \log \prod_{i=n}^{m} 2^{f(i, \mathbf{x})}, \\
+    \displaystyle \sum_{i=n}^{m} f(i, \mathbf{x}) = \log \prod_{i=n}^{m} 2^{f(i, \mathbf{x})}. \\
  \end{array}
 \]
 
-\noindent and the rest of our proof is trivial:
-  $\displaystyle x\times y = \sum_{i = 1}^x y$, 
-  $\displaystyle x + y = \log \left( 2^{x} \times 2^y \right)$, 
-  $\displaystyle x - y = \sum_{i = 0}^x N(\eq(i + y, x)) \times i$ and 
-  $\displaystyle |x-y| = \mathrm{gt}(x, y) \times (x - y) + \mathrm{lt}(x, y) \times (y - x)$. \qed
-
+\noindent Notice that
+$\displaystyle x\times y = \sum_{i=1}^x y$,
+$x + y = \log(2^x\cdot x^y)$, and
+$\displaystyle |x-y| = \Big( \sum_{i=x+1}^y 1 \Big) + \Big( \sum_{i=y+1}^x 1 \Big)$,
+our proof is complete. \qed
 \end{pf}
 

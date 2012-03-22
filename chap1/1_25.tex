@@ -1,1 +1,38 @@
-\problem{1.25}
+\problem*{Let $f:\mathbb{N}\to\mathbb{N}$ be the $n$-th digit in the decimal
+representation of $\pi$. Prove that $f\in\GRF$.}
+
+\begin{pf} \rm
+ Given a $m$ by $m$ grid, we count the integral point of $(x,y)$
+ within a circle centered at $(0, 0)$ with radius $m$ by 
+\[
+ S = \Big| \{ (x, y) ~|~ x,y\in\mathbb{N}\textrm{ and }x^2 + y^2 \leq m^2 \} \Big|
+\]
+
+\noindent to approximately find $\pi$. $S$ is elementary because
+\[
+ S(m) = \sum_{i=0}^{m} \sum_{j=0}^{m} N(i^2 + j^2 - m^2).
+\]
+
+\noindent Area of the circle is $S_c(m) = \pi m^2 / 4$, 
+and by the fact that the circle intersects with at most $2m$ $1\times 1$ blocks,
+we have $|S(m)-S_c(m)|<2m$, therefore
+
+\[
+\begin{array}{c}
+ \displaystyle
+   \left| 
+   \frac{S(m)}{m^2} - \frac{\pi}{4}
+   \right| = \frac{1}{m^2} |S(m) - S_c(m)| < 2 m^{-1}, \textrm{ and}\\
+ \displaystyle
+ \big| 4S(m) - m^2 \pi\big| < 8m.
+\end{array}
+\]
+
+To compute $f(n)$, we need an exponentially large grid, say, $m=10^{n+1}$.
+Then we have $|4S(10^{n+1}) - 10^{2n+2}\cdot\pi| < 10^{n+2}$,
+which means that $4S$ has at least 
+$n+1$ accurate digits of $\pi$, thus
+$f(n) = \rs( S(10^{n+1}) / 10^{n+2} , 10) \in\EF\subset\GRF$. 
+\qed
+\end{pf}
+

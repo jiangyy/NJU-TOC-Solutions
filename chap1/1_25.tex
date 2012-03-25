@@ -1,4 +1,4 @@
-\problem*{Let $f:\mathbb{N}\to\mathbb{N}$ be the $n$-th digit in the decimal
+\problem{Let $f:\mathbb{N}\to\mathbb{N}$ be the $n$-th digit in the decimal
 representation of $\pi$. Prove that $f\in\GRF$.}
 
 \begin{pf} \rm
@@ -28,11 +28,21 @@ we have $|S(m)-S_c(m)|<2m$, therefore
 \end{array}
 \]
 
-To compute $f(n)$, we need an exponentially large grid, say, $m=10^{n+1}$.
-Then we have $|4S(10^{n+1}) - 10^{2n+2}\cdot\pi| < 10^{n+2}$,
-which means that $4S$ has at least 
-$n+1$ accurate digits of $\pi$, thus
-$f(n) = \rs( S(10^{n+1}) / 10^{n+2} , 10) \in\EF\subset\GRF$. 
+To compute $f(n)$, we need an exponentially large grid, say, $m=10^{k}$.
+Then we have $|4S(10^{k}) - 10^{2k}\cdot\pi| < 10^{k+1}$.
+We know that $4S(10^k)$ has $2k$ digits and last $k$ of them is inaccurate,
+so we use regular $\mu$ operator to enumerate $k$ until we met a non-zero digit
+between the first $n+1$ digits and the last $k$ digits:
+
+\[
+  K(n) = \mu k. \left\{ n + 1 - k + 
+    N\left[\rs \left( \frac{S(10^k)}{10^k}, 10^{k-n-1} \right)\right] \right\}.
+\]
+
+\noindent Since there is no infinitely long successive zeros in decimal representation of $\pi$
+(otherwise $\pi$ will be rational), regularity is ensured and thus $K\in\GRF$,
+therefore
+$\displaystyle  f(n) = \rs\left[ \frac{ S\left(10^{K(n)}\right)}{10^{K(n) + 1} } , 10 \right]\in\GRF$. 
 \qed
 \end{pf}
 

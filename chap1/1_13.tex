@@ -12,9 +12,10 @@ we have $F$ is in $\PRF$ and $K(F(x)) = f(x)$, therefore $f\in\PRF$.
 On the other hand, 
 $f(x)$ is the number of binary strings of length $x-1$ without successive 1s. Therefore
 
-$\displaystyle f(x) = \sum_{i=0}^{2^{n-1}} \sum_{j = 0}^{n - 2}
-N\Big(\eq ( \rs(i, 2^j) , \rs(i, 2^{j + 1}))\Big) \times
-\eq \Big( \rs(i, 2^j) , 0 \Big) \in \EF$.
+$\displaystyle f(x) = \sum_{i=0}^{ 2^{n-1}} N\left[ \sum_{j = 0}^{n - 2}
+\mathrm{neq} \left( \frac{\rs(i, 2^j)}{2^{j - 1}} , 1  \right)
+\mathrm{neq} \left( \frac{\rs(i, 2^{j+1})}{2^{j}} , 1  \right) \right]
+\in\EF$.
 \qed
 \end{pf}
 

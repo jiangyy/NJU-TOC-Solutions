@@ -4,25 +4,9 @@ $f(x,0) = g(x)$, $f(x, y + 1) = f(f(\ldots f(f(x, y), y - 1), \ldots),0)$.
 Prove that $f\in\PRF$.}
 
 \begin{pf} \rm
- Let $G(x, 0) = x$ and $G(x, y + 1) = g(G(x, y))$,
- $F(0) = 1, F(x + 1) = F(x) + \sum_{i = 0}^{x} F(x)$. it is obvious that
- $G\in\PRF$, and $F(x) = Fib(2x) \in \PRF$.
- 
- We now prove that $f(x, y) = G(x, F(y))$.
- The basis is $f(x, 0) = G(x, 1) = g(x)$, and we assume that
- $f(x, y^*) = G(x, F(y^*))$ For all $y^* \leq y$. Therefore, 
-
-\[
- \begin{array}{rcl}
- f(x, y + 1)  & = &  \underbrace{g(g(\ldots g(}_{\sum_{i = 0}^{y} F(i)\textrm{ times}}
-   f(x, y) )\ldots )) \\
- & = & \underbrace{g(g(\ldots g(}_{F(y) + \sum_{i = 0}^{y} F(i)\textrm{ times}}
-   x )\ldots )) \\
-   & = & G(x, F(y + 1)),
-  \end{array}
-\]
-
-\noindent which means $f(x, y) = G(x, F(y))\in \PRF$. \qed
+ Let $G(x, 0) = x$ and $G(x, y + 1) = g(G(x, y))$.
+ A simple induction shows that $f(x, y) = g^{2^{y-1}}(x)$,
+ thust $f(x,y) = G(x, 2^{y-1}) \in\PRF$. \qed
 \end{pf}
 
 

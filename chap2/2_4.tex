@@ -1,0 +1,17 @@
+\problem{Construct $\AM$ for $g(x) = \mu y. [f(x, y)]$ assuming that $\mathbf{F}\in\AM$
+defines $f$.}
+\begin{pf} \rm
+ Assume that $\mathbf{F}$ uses at most $k$ pillars.
+ If $x, y$ is located at position $k + 1, k + 2$, respectively,
+ we can compute $f(x, y)$ by
+\[
+ \mathbf{M} = \cp_{k+1, 1} \cp_{k + 2, 2} \mathbf{F}.
+\]
+
+Therefore, $g$ can be constructed by repeatedly enumerate $y$ until $f$ becomes zero:
+
+$g = \mv_{1, k + 1} \mathbf{M} \L \A_{k+2} \cp_{k+1, 1}\cp_{k+2, 2} \mathbf{M} \R_1
+\mv_{k + 2, 1} \Z_{k+1}
+$.
+ \qed
+\end{pf}

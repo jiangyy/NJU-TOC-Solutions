@@ -1,0 +1,7 @@
+\problem{Prove the \emph{Parenthesis Lemma}: for all $M\in\Lambda$, the occurrence
+of left parenthesis is equal to the occurrence of right parenthesis.}
+\begin{pf} \rm
+  Let $p(M)$ be the difference of the occurrence of left and right parenthesis in $M$,
+  We have $p(x) = 0$, $p[(M_1M_2)] = p(M_1) + p(M_2)$ and
+  $p[ (\lambda x.M) ] = p(M)$. A formal proof comes from a simple structural induction. \qed
+\end{pf}

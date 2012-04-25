@@ -1,0 +1,14 @@
+\problem{Find $\beta$-nf of $SSSS$.}
+\begin{pf} \rm According to $S\equiv \lambda xyz.xz(yz)$ and 
+$SS =_\beta \lambda xyz. yz(xyz)$, we have
+\[
+ \begin{array}{rcl}
+  SSSS & =_\beta & SS(SS) \\
+       & =_\beta & \lambda xy. [ x y ( SSxy) ] \\
+       & =_\beta & \lambda xy. xy( \lambda z. yz (xyz) ) = M. \\
+ \end{array}
+\]
+
+\noindent $M=_\beta SSSS$ is $\beta$-nf of $SSSS$ because it has no redex.
+\qed
+\end{pf}

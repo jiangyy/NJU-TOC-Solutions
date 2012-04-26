@@ -1,27 +1,5 @@
-% \XeTeXinputencoding "cp936"
-
-\setCJKfamilyfont{kai}{KaiTi_GB2312}
-\setCJKfamilyfont{hei}{STXihei}
-\setCJKmainfont{SimSun}
-
-\pagestyle{fancy}
-\rhead{{\sf\thepage}}
-\lhead{\sf ``Introduction to Models of Computation'' Solutions}
-
-\renewcommand{\contentsname}{\hei 目录}
-\renewcommand{\figurename}{\kai 图}
-\renewcommand{\algorithmcfname}{\kai 算法}
-
-\newcommand{\kai}{\CJKfamily{kai}}
-\newcommand{\hei}{\CJKfamily{hei}}
-
-\newcommand\TT{\rule{0pt}{2.6ex}}
-\newcommand\BB{\rule[-1.2ex]{0pt}{0pt}}
-
-\renewcommand\refname{\hei 参考文献}
-
-%\setlength{\parindent}{2.2em}
-
+%%%%%%%%%%%%%%%%%%%%%%% TeX defines %%%%%%%%%%%%%%%%%%%%%%%
+% Listing Style
 \lstset {
         basicstyle = \sf,
         language = Java,
@@ -29,13 +7,21 @@
         columns = flexible
 }
 
+% Enumeration separations
 \usepackage{enumitem}
 \setenumerate[1]{itemsep=3pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
 \setitemize[1]{itemsep=3pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
 \setdescription{itemsep=3pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
 \usepackage{sectsty}
-\allsectionsfont{\hei}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%% TOC defines %%%%%%%%%%%%%%%%%%%%%%%
+% General terms
+\newcommand{\problem}{\subsection}
+\newtheorem*{pf}{Proof}
+
+% Recursive functions
 \newcommand{\IF}{\mathcal{IF}}
 \newcommand{\EF}{\mathcal{EF}}
 \newcommand{\PRF}{\mathcal{PRF}}
@@ -46,6 +32,8 @@
 \newcommand{\eq}{\mathrm{eq}}
 \newcommand{\ep}{\mathrm{ep}}
 \newcommand{\mod}{\textrm{ mod }}
+
+% Abacus machines
 \newcommand{\AM}{\mathrm{AM}}
 \renewcommand{\L}{\left\langle}
 \newcommand{\R}{\right\rangle}
@@ -54,5 +42,10 @@
 \newcommand{\A}{\mathbf{A}}
 \newcommand{\cp}{\mathbf{copy}}
 \newcommand{\mv}{\mathbf{move}}
-\newcommand{\problem}{\subsection}
 
+% Lambda calculus
+\newcommand{\bnf}{\beta\textrm{-nf}}
+\newcommand{\subterm}{\textrm{Sub}}
+\newcommand{\onestepbeta}{\rightarrow_{\beta}}
+\newcommand{\manystepbeta}{\twoheadrightarrow_{\beta}}
+\newcommand{\equivbeta}{=_{\beta}}

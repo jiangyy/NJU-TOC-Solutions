@@ -1,0 +1,11 @@
+\problem{Prove that there is no $\bnf$ for $ (\lambda x. xxx)(\lambda x.xxx)$.}
+\begin{pf} \rm
+ Let $N = \lambda x.xxx$ and $M=NN$, we have
+ $\subterm(M) = \{ N, NN\}$. It is trivial that $NN \in \subterm(M)$.
+ If $\subterm(A) = \bigcup_{i=1}^{k} N^k$ and $A \onestepbeta B$, $\subterm(B)$ will be either
+  $\subterm(A)$ or $\subterm(A)\cup N^{k+1}$, hence
+ $NN\in\subterm(M')$ holds for all $M \manystepbeta M'$.
+
+ Assume that the $\bnf$ of $M$ is $M_\beta$, we have $NN\in\subterm(M_\beta)$ which
+ leads to a contradiction. \qed
+\end{pf}

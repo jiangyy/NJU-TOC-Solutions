@@ -1,31 +1,27 @@
 \documentclass[11pt]{article}
 \usepackage{amssymb}
 \usepackage{amsthm}
-\usepackage{fontspec,xunicode,xltxtra}
 \usepackage{titlesec}
 \usepackage{indentfirst}
-\usepackage[BoldFont]{xeCJK}
-\usepackage{url}
-\usepackage[superscript]{cite}
 \usepackage[b5paper]{geometry}
-\usepackage[vlined,boxed,linesnumbered]{algorithm2e}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{listings}
+%\usepackage{txfonts}
+
 \input{config.tex}
 
+% Page header
+\pagestyle{fancy}
+\rhead{{\sf\thepage}}
+\lhead{\sf ``Introduction to Models of Computation'' Solutions}
+
+% Title
+\title{\bf ``Introduction to Models of Computation'' Solutions}
+\author {Yanyan Jiang}
+\date{Spring, 2012}
 
 \begin{document}
-
-\newtheorem{thm}{定理}
-\newtheorem{deff}[thm]{定义}
-\newtheorem*{pf}{Proof}
-\newtheorem{lem}[thm]{引理}
-
-\title{\hei \bf ``Introduction to Models of Computation'' Solutions}
-\author {Yanyan Jiang}
-\date{\kai Spring, 2012}
-
 \maketitle
 
 \section{Recursive Functions}
@@ -68,7 +64,7 @@
 
 \input{chap3/3_1.tex}
 \input{chap3/3_2.tex}
-
+\input{chap3/3_3.tex}
 
 \newpage
 \end{document}

@@ -1,0 +1,11 @@
+\problem{Prove that for all $P,Q\in\Lambda$, $P\manystepbeta Q$ implies the existence of
+$n\geq 0$ and $P_0,\ldots,P_n\in\Lambda$ satisfying $P\equiv P_0$,
+$Q\equiv P_n$ and $P_i\onestepbeta P_{i+1}$ for all $i<n$.}
+\begin{pf} \rm
+According to the fact that $$
+ \manystepbeta =
+ \bigcup_{i=0}^{\infty} (\onestepbeta)^i,
+$$ for all $P, Q\in\Lambda$,  $P\manystepbeta Q$ implies
+ existence of $k$ such that $P (\onestepbeta)^k Q$.
+A structural induction on $k$ directly leads to a proof. \qed
+\end{pf}

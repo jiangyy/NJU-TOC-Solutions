@@ -1,0 +1,13 @@
+\problem{Prove that for all $P,Q\in\Lambda$, $P\manystepbeta Q$ implies
+$\lambda z.P\manystepbeta \lambda z.Q$.}
+\begin{pf} \rm
+ According to 3.7, sequence $P_0,\ldots,P_n\in\Lambda$ with $P\equiv P_0$, 
+ $Q\equiv P_n$ and $P_i\onestepbeta P_{i+1}$.
+ Also because $\onestepbeta$ is the compatible closure of $\beta$, we have $\lambda z.A \onestepbeta \lambda z.B$
+ for all $A\onestepbeta B$.  Thus for all $i < n$,
+
+ \[\lambda z.P_i \onestepbeta \lambda z.P_{i+1}\]
+ in  $\lambda z.P_0, \lambda z.P_1, \ldots, \lambda z.P_n$ always holds, that is,
+ $\lambda z.P\manystepbeta \lambda z.Q$.
+ \qed
+\end{pf}

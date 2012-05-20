@@ -1,0 +1,13 @@
+\problem{Prove for all $M,N\in\Lambdaclosed$, there is a solution for $xN=Mx$. }
+\begin{pf} \rm
+ Let $x$ be the form of $\lambda a.T$, this makes
+ $(\lambda a.T) N = T$. This reduces rest of our proof to finding a solution to
+\[
+ T = M(\lambda a.T)= [ \lambda t. M(\lambda a.t) ] T.
+\]
+Let $T = \Y[\lambda t.M(\lambda a.t)]$ hence $x=\lambda x. 
+\Y[\lambda y.M(\lambda z.y)]$, $xN=Mx$ is satisfied.
+
+
+\qed
+\end{pf}

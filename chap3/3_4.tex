@@ -1,0 +1,7 @@
+\problem{Let $F\in\Lambda$ with the form of $\lambda x.M$. Prove that
+$\lambda z.Fz \equivbeta F$ and $\lambda z.yz \neq_{\beta} y$.}
+\begin{pf} \rm
+ $\lambda z.Fz \equiv \lambda z. (\lambda x. M)z \onestepbeta
+\lambda z.(M[x:=z]) \equiv M$.
+ \qed
+\end{pf}

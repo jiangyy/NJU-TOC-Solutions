@@ -1,0 +1,9 @@
+\problem{Prove the fixed-point theorem for two variables: for all $F,G\in\Lambda$, exists
+$X,Y\in\Lambda$ such that $FXY=X$ and $GXY=Y$. }
+\begin{pf} \rm
+ According to the equation $(GX)Y=Y$, let $Y$ be the fixed-point of $GX$, say $\Y(GX)$,
+ we have $FX(\Y(GX))=X$, thus
+  \[\lambda x.[Fx (\Y(Gx)) ] X = X.\]
+ We can now derive a solution by letting $X=\Y [\lambda x.Fx (\Y(Gx)) ]$ and $Y=\Y(GX)$.
+ \qed
+\end{pf}

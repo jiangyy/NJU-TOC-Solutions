@@ -1,0 +1,15 @@
+\problem{Find $F\in\Lambdaclosed$ such that $F$ $\lambda$-defines $f(x)=3x$.}
+\begin{pf} \rm
+ We are to construct $F \churchnumber{n} = \churchnumber{3n} = \lambda fx. f^n (f^n (f^n x))$.
+
+\[
+ \begin{array}{rcl}
+  \lambda fx. f^n (f^n (f^n x)) & = & \lambda fx. f^n (f^n (\churchnumber{n} f x)) \\
+  & = & \lambda fx. f^n (\churchnumber{n} f (\churchnumber{n} f x)) \\
+  & = & \lambda fx. \churchnumber{n}f (\churchnumber{n} f (\churchnumber{n} f x)) \\
+  & = & [\lambda nfx. nf (nf (nfx))] \churchnumber{n}.
+ \end{array}
+\]
+therefore, $F = \lambda xyz. xy(xy(xyz))$ $\lambda$-defines $f(x)=3x$.
+\qed
+\end{pf}

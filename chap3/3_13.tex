@@ -1,0 +1,16 @@
+\problem{Prove that by extending $\lambda\beta$ by axiom of
+$\lambda xy.x = \lambda xy.y$, $\lambda\beta^* \vdash M=N$ for all $M,N\in\Lambda$.}
+\begin{pf} \rm
+For all $M,N\in\Lambda$, $ \lambda xy.x = \lambda xy.y
+\Rightarrow
+  (\lambda xy.x)M = (\lambda xy.y)N
+\Rightarrow
+  (\lambda xy.x)MN = (\lambda xy.y)MN
+\Rightarrow
+  (\lambda xy.x)MN = (\lambda xy.y)MN
+\Rightarrow
+  M = (\lambda xy.y)MN
+\Rightarrow
+  M=N
+$. \qed
+\end{pf}

@@ -1,0 +1,21 @@
+\problem{Let $\D\equiv \lambda xyz.z(\K y)x$. Prove that for all $X,Y\in\Lambda$,
+$\D XY\churchnumber{0} = X$ and $\D XY\churchnumber{n+1} = Y$. }
+\begin{pf} \rm
+ We have $\D XY\churchnumber{0} = 
+  \churchnumber{0} (\lambda y. Y) X
+  = (\lambda fx. x) (\lambda y.Y) X = X
+ $, and
+ \[
+\begin{array}{rcl}
+ \D XY\churchnumber{n+1} & = &
+  \churchnumber{n+1} (\lambda y. Y) X \\
+  &=& (\lambda fx. f^{n+1} x)(\lambda y.Y) X \\
+  &=& (\lambda x. (\lambda y.Y)^{n+1} x) X \\ 
+  &=& (\lambda x. (\lambda y.Y)^n Y)X \\
+  &=& (\lambda x. Y)X = Y.\\
+\end{array}
+  \]
+
+\noindent $\D$ is very powerful because it have the ability of separating cases.
+ \qed
+\end{pf}

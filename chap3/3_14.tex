@@ -2,5 +2,10 @@
 (1) there is no $N\in\Lambda$ such that $M\to_R N$; (2) $M\twoheadrightarrow_R N
 \Rightarrow M\equiv N$.}
 \begin{pf} \rm
- 
+(1) Trivial by the definition of $\NF_R$ that, $M$ has no redex.
+
+\noindent (2) Assume that $M\not\equiv N$. $M\twoheadrightarrow_R N$ implies
+existence of $M=P_0,\ldots,P_n=N$ that, $P_i\to_R P_{i+1}$ for $i<n$.
+We must have $n\geq 1$ because $M\not\equiv N$. This leads to contradiction
+because there exists $N$ such that $M\to_R N$. \qed
 \end{pf}

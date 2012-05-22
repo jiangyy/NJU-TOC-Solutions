@@ -1,5 +1,49 @@
 \problem{Prove that for all $M,N\in\Lambda$, $M\equivbeta N$ if and only if
 $\lambda\beta \vdash M=N$.}
 \begin{pf} \rm
- \qed
+ The axiom of $\lambda\beta$ shows that $M=M$ and $(\lambda x.M)N=M[x:=N]$.
+ Also because $\beta\equiv \{((\lambda x.M)N, M[x:=N]): M,N\in\Lambda \land x\in V\} $
+ and $\equivbeta$ is reflexive, $M\equivbeta M$ and $(\lambda x.M)N\equivbeta M[x:=N]$ holds.
+ This serves our inductive basis.
+  
+ Assume that $\lambda\beta \vdash M=N$ implies $M\equivbeta N$ for all formula
+ $M=N$ with construction length less or equal to $\ell$.
+ A formula of construction length $\ell + 1$ will be within either of the following cases:
+
+\begin{enumerate}
+ \item $(\sigma): M=N\vdash N=M$, $\equivbeta$ is symmetric makes
+$N\equivbeta M$;
+ \item $(\tau): M=N, N=L\vdash M=L$,
+ $\equivbeta$ is transitive makes $N\equivbeta M$;
+ \item $(\mu): M=N\vdash ZM=ZN$, $\equivbeta$ is compatible makes
+ $ZM\equivbeta ZN$;
+ \item $(\nu): M=N\vdash MZ=NZ$, $\equivbeta$ is compatible makes
+ $MZ\equivbeta NZ$;
+ \item $(\xi): M=N\vdash \lambda x.M=\lambda x.N$, $\equivbeta$ is compatible makes
+ $\lambda x.M \equivbeta \lambda x.N$.
+\end{enumerate}
+
+ Therefore, $\lambda\beta \vdash M=N$ implies $M\equivbeta N$.
+
+ On the other side,
+ $M\onestepbeta N$ implies $M\equivbeta N$ because either $M\beta N$ thus $M=N$ by $(\beta)$,
+ or $(M,N)$ is in the compatible closure of $\{(M',N')\}$ for some $M'\beta N'$.
+ 
+ By the theorem proved in 3.9, 
+ for all $M\equivbeta N$, there exists $n\geq 0$ and $P_0,\ldots,P_n\in\Lambda$
+ such that $P\equiv P_0, Q\equiv P_n$ and either $P_i\onestepbeta P_{i+1}$ or
+ $P_{i+1} \onestepbeta P_{i}$ for all $i<n$. Take the case of $n=0$, which is
+ that $M\equivbeta M$ implies $\lambda\beta \vdash M=M$ as inductive basis,
+ we perform an induction on the shortest construction length of $n$.
+
+ Assuming that for all $A\equivbeta B$ with construction length of $m$ less than $n$,
+ $\lambda\beta\vdash A=B$ holds.
+ For construction sequence $M = P_0,\ldots,P_{n-1},P_n = N$,
+ we have $\lambda\beta\vdash M = P_{n-1}$ by the inductive hypothesis.
+ Because $P_{n-1}\onestepbeta P_n$ or $P_{n}\onestepbeta P_{n-1}$ means that
+ $\lambda\beta\vdash P_{n-1} = P_n$, according to $(\tau)$, $\lambda\beta\vdash M = P_{n-1} = P_n = N$,
+ therefore $A\equivbeta B$ implies $\lambda\beta\vdash A=B$.
+
+ In summary, $\equivbeta$ is equivalent to the formal system of $\lambda\beta$.
+\qed
 \end{pf}

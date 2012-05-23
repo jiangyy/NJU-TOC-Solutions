@@ -1,0 +1,33 @@
+\problem{Let $\mathbf{Exp}\equiv \lambda xy.yx$. Prove that for all
+$n\in\mathbb{N}$ and
+$m\in\mathbb{N}^+$,
+$\mathbf{Exp}\churchnumber{n}\churchnumber{m}\equivbeta
+\churchnumber{n^m}$.
+}
+\begin{pf} \rm We simply expand $\mathbf{Exp}$ by 
+\[
+\begin{array}{rcl}
+ \mathbf{Exp} \churchnumber{n} \churchnumber{m} & = &
+  (\lambda xy.yx) (\lambda fx.f^n x) (\lambda fx.f^m x) \\
+ & = & (\lambda fx.f^m x) (\lambda fx.f^n x) \\
+ & = & (\lambda x. (\lambda fy.f^n y)^m x). \\
+\end{array}
+\]
+
+For $m=1$, $(\lambda fy.f^ny) x = \lambda y. x^n y$.
+Assume that
+$(\lambda fy.f^ny)^m x = \lambda y. x^{n^m} y$,
+we have 
+\[
+ \begin{array}{rcl}
+ (\lambda fy.f^ny)^{m+1} x & = &
+ (\lambda fy.f^ny) [ (\lambda fy.f^ny)^m x )] \\
+ & =& (\lambda fy.f^ny)  (\lambda y.x^{n^m} y) \\
+ & = & \lambda y. (\lambda z.x^{n^m} z)^n y \\
+ & = & \lambda y. x^{n^{m+1}} y.
+  \end{array}
+\]
+This implies $\mathbf{Exp} \churchnumber{n} \churchnumber{m}
+= \lambda xy. x^{n^{m}}y=\churchnumber{n^m}$ for all $m>0$.
+ \qed
+\end{pf}

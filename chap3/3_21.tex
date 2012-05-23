@@ -1,0 +1,24 @@
+\problem{Let $f,g:\mathbb{N}\to\mathbb{N}$,
+$f(0)=0$ and $f(n+1)=g(f(n))$. If $G\in\Lambdaclosed$ $\lambda$-defines
+$g$, find $F\in\Lambdaclosed$ such that $F$ $\lambda$-defines $f$.}
+\begin{pf} \rm
+ Our goal is to achieve 
+
+\[
+\begin{array}{rcl}
+F\churchnumber{n} & = & \mathbf{D}\churchnumber{n}\churchnumber{0}
+G[F(\mathbf{pred} \churchnumber{n})] \\
+&=  &
+\{ \lambda n. \mathbf{D}n\churchnumber{0}
+G[F(\mathbf{pred} n)] \} \churchnumber{n} \\
+& = &
+\{ (\lambda fn.
+ \mathbf{D}n\churchnumber{0}
+G[f(\mathbf{pred} n)]) F \} \churchnumber{n}. \\
+\end{array}
+\]
+Therefore, $F\equiv \Y(\lambda xy.
+ \mathbf{D}y\churchnumber{0}
+G[x(\mathbf{pred} y)])$ $\lambda$-defines $f$.
+\qed
+\end{pf}

@@ -3,5 +3,10 @@ $N\vartriangleright_{\mathrm{mcd}} N'$ implies
 $MN\vartriangleright_{\mathrm{mcd}} M'N'$.
 }
 \begin{pf} \rm
+  $M\vartriangleright_{\mathrm{mcd}} M'$ means that there exists
+  sequence $M_1,M_2,\ldots, M_n$ reduces $M$ to $M'$, and so does 
+  $N\vartriangleright_{\mathrm{mcd}} N'$. Merging the two sequences will yield
+  minimal complete development from $MN$ to $M'N'$ because $M_i$ will always
+  be minimal redex of the remaining sequence.
   \qed
 \end{pf}

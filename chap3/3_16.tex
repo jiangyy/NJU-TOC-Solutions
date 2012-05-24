@@ -1,5 +1,32 @@
 \problem{Prove that for all $M,N\in\Lambda$, $M\equivbeta N$ implies the existence
 of $T$ such that $M\manystepbeta T$ and $N\manystepbeta T$.}
 \begin{pf} \rm
+  $M\equivbeta N$ implies that 
+\[
+(M,N)\in
+\bigcup_{k=0}^{\infty} (\onestepbeta \cup \leftarrow_\beta)^k.
+\]
+We take the basis case of $k=0$, that is, $M\equiv N$ as our basis.
+Assume that for all $(M,N)\in (\onestepbeta \cup \leftarrow_\beta)^k$, there exists
+$T\in\Lambda$ such that $M\manystepbeta T$ and $N\manystepbeta T$. For the case of
+$(M,N)\in (\onestepbeta \cup \leftarrow_\beta)^{k+1}$, either
+\[
+ (1)~ M\onestepbeta P \equivbeta N
+\]
+or
+\[
+ (2)~ M\leftarrow_\beta P\equivbeta N
+\]
+holds where $(P,N)\in (\onestepbeta \cup \leftarrow_\beta)^k$.
+According to the inductive hypothesis, there exists $T_0$ such that
+$P\manystepbeta T_0$ and $N\manystepbeta T_0$. Because $\manystepbeta$
+is transitive, We have $M\manystepbeta T_0$ in the case $(1)$.
+
+In the case $(2)$, according to the CR-property of $\manystepbeta$,
+$P\manystepbeta M$ and $P\manystepbeta T_0$ implies the existence of
+$T\in\Lambda$ that, $M\manystepbeta T$ and $T_0\manystepbeta T$.
+Again because the transitivity of $\manystepbeta$, $N\manystepbeta T_0$ and
+$T_0\manystepbeta T$ yields $N\manystepbeta T$.
+Therefore such a $T$ exists for all $k\in\mathbb{N}$.
  \qed
 \end{pf}

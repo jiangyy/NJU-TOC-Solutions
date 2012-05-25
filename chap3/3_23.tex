@@ -1,0 +1,23 @@
+\problem{Prove that there exists $B\in\Lambdaclosed$ such that
+$F_{[\churchnumber{x}\mapsto x]} \equivbeta BFx\churchnumber{x}$.}
+\begin{pf} \rm
+ We first construct the minimum representation of a $\lambda$ term to identify the
+ $\equiv$ relationship of $\Lambdaclosed$ such that
+\[
+ \mathbf{min} X =\mathop{\mathrm{argmin}}_{M\in\Lambdaclosed, M\equiv X} \churchnumber{M}.
+\]
+
+ We can compute $\mathbf{min}$ by a recursive procedure that keeps a table of variable substitution,
+ and log the minimum unused number in each abstraction operation (very complicated, though).
+ Since every function in $\PRF$ can be represented in $\lambda$-calculus,
+ $\mathbf{min}\in\Lambdaclosed$ exists.
+ Also, we have $\mathbf{minus}\in\Lambdaclosed$ such that 
+ $\mathbf{minus}\churchnumber{x}\churchnumber{y} = 
+ \churchnumber{|x-y|}$. Therefore, let
+\[
+ B = \lambda fxyz. \mathbf{D}(\mathbf{minus} (\mathbf{min}y) (\mathbf{min}z))x(fz),
+\]
+$F_{[\churchnumber{x}\mapsto x]} \equivbeta BFx\churchnumber{x}$
+is achieved. 
+\qed
+\end{pf}

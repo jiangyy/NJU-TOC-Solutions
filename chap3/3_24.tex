@@ -1,0 +1,20 @@
+\problem{Find $\mathbf{H}\in\Lambdaclosed$ such that for all $n\in\mathbb{N}$ and
+$x_1,\ldots,x_n\in\Lambda$, $\mathbf{H}\churchnumber{n} x_1\ldots x_n \equivbeta
+\lambda z.zx_1\ldots x_n$.}
+\begin{pf} \rm
+ We are to find $\mathbf{H}\churchnumber{n} =
+  \lambda x_1 \ldots x_n z. z x_1\ldots x_n$.
+ We use the technique to encode $M_n\equiv \lambda x_1 \ldots x_n z. z x_1\ldots x_n$ 
+ and to decode it with $\mathbf{E}$.
+ $\sharp M_n$ is recursive because
+ \[
+  \sharp M_n = 
+  [2, [\sharp x_1, \sharp( \lambda x_2 \ldots x_n. z x_1 \ldots x_n)]]
+ \]
+ and
+ \[
+  \sharp( z x_1 \ldots x_n )
+ \]
+ is recursive. Therefore, there is $G\in\Lambdaclosed$ $\lambda$-defines $f(n) = \sharp M_n$,
+ thus $\mathbf{H} = \lambda x. \mathbf{E}(Gx)$ is our solution. \qed
+\end{pf}

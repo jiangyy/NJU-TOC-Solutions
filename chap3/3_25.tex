@@ -2,5 +2,9 @@
 $\mathbf{H}_2\churchnumber{F}\equivbeta F\churchnumber{
 \mathbf{H}_2 \churchnumber{F}}$.}
 \begin{pf} \rm
- I have not solved it yet. If you have any idea about this problem, please contact me. \qed
+\newcommand{\ncode}[1]{\ulcorner #1\urcorner}
+\newcommand{\eqbeta}{=_\beta}
+\newcommand{\W}{\lambda x.F(\text{app}x\sharp x)}
+
+According to \textbf{Theorem} 3.42, $\forall F\in\Lambda, \exists Z\equiv W\ncode{W}$ such that $F\ncode{Z}\eqbeta Z$, and $W\equiv\W$. Therefore, let $H_2\ncode{F}\eqbeta W\ncode{W}$. Since $F\in\text{FV}(W)$, we have $$H_2\ncode{F}\eqbeta(\lambda F.W\ncode{W})F\eqbeta(\lambda F.W\ncode{W})E\ncode{F}$$ to complete the proof, which $E$ is the enumerator in \textbf{Theorem} 3.41. \qed 
 \end{pf}
